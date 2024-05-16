@@ -11,7 +11,7 @@ import version_gen
 
 VALID_MAX_CONFIGS: dict[tuple[str, str], set[str]] = {
     ('Visual Studio', '15'): { '2022' },
-    ('Visual Studio', '16'): { '2023', '2024' },
+    ('Visual Studio', '16'): { '2023', '2024', '2025' },
 }
 
 SETTINGS: dict[str, Any] = {

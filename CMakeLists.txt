@@ -8,7 +8,7 @@ find_package( thinkboxcmlibrary REQUIRED )
 include( PrecompiledHeader )
 include( ThinkboxCMLibrary )
 
-set( SUPPORTED_MAX_VERSIONS 2022 2023 2024)
+set( SUPPORTED_MAX_VERSIONS 2022 2023 2024 2025)
 
 option( MAX_VERSION "The version of the 3ds Max SDK to build the library against." 2024 )
 
@@ -80,7 +80,9 @@ find_package( tinyxml2 REQUIRED )
 find_package( xxHash REQUIRED )
 find_package( OpenVDB REQUIRED )
 find_package( HDF5 REQUIRED )
-find_package( MKL REQUIRED )
+find_package( MKL REQUIRED 	HINTS "C:/program files (x86)/intel/oneAPI"
+							PATH_SUFFIXES 	"mkl/latest/lib/cmake/mkl"
+											"mkl/2024.1/lib/cmake/mkl")
 
 target_include_directories( stokemx PUBLIC ${thinkboxlibrary_INCLUDE_DIRS} )
 target_include_directories( stokemx PUBLIC ${maxsdk_INCLUDE_DIRS} )

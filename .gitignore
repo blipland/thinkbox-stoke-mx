@@ -1,3 +1,7 @@
 build
 *.rsp
 .vs/
+StokeMXVersion.rc
+StokeMXVersion.h
+third_party_licenses.txt
+conan/
